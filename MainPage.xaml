@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <Rectangle Height="100" Stroke="Black" Width="433" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,668,0,0" StrokeThickness="0" Fill="#FFFFDBDB"/>
+        <Rectangle Height="100" Stroke="Black" Width="433" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,671,0,0" StrokeThickness="0" Fill="#FFFFDBDB"/>
 
     </Grid>
 </Page>
