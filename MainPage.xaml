@@ -33,11 +33,66 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="btn_Navigation" TargetType="Button">
+            <Setter Property="Background" Value="{ThemeResource ButtonBackground}"/>
+            <Setter Property="BackgroundSizing" Value="OuterBorderEdge"/>
+            <Setter Property="Foreground" Value="{ThemeResource ButtonForeground}"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource ButtonBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}"/>
+            <Setter Property="Padding" Value="{StaticResource ButtonPadding}"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="UseSystemFocusVisuals" Value="{StaticResource UseSystemFocusVisuals}"/>
+            <Setter Property="FocusVisualMargin" Value="-3"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Rectangle Height="80" Stroke="Black" Width="80" StrokeThickness="4" RadiusX="20" RadiusY="5" Fill="#FF564937"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="btn_NavigationProfile" TargetType="Button">
+            <Setter Property="Background" Value="{ThemeResource ButtonBackground}"/>
+            <Setter Property="BackgroundSizing" Value="OuterBorderEdge"/>
+            <Setter Property="Foreground" Value="{ThemeResource ButtonForeground}"/>
+            <Setter Property="BorderBrush" Value="{ThemeResource ButtonBorderBrush}"/>
+            <Setter Property="BorderThickness" Value="{ThemeResource ButtonBorderThemeThickness}"/>
+            <Setter Property="Padding" Value="{StaticResource ButtonPadding}"/>
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="FontFamily" Value="{ThemeResource ContentControlThemeFontFamily}"/>
+            <Setter Property="FontWeight" Value="Normal"/>
+            <Setter Property="FontSize" Value="{ThemeResource ControlContentThemeFontSize}"/>
+            <Setter Property="UseSystemFocusVisuals" Value="{StaticResource UseSystemFocusVisuals}"/>
+            <Setter Property="FocusVisualMargin" Value="-3"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Rectangle Fill="#FF564937" Height="80" RadiusX="20" RadiusY="5" Stroke="Black" StrokeThickness="4" Width="100"/>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Page.Resources>
 
 
     <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="768" Width="433">
-        <Rectangle x:Name="ui_BottomBar" Height="100" Stroke="Black" Width="433" VerticalAlignment="Bottom" HorizontalAlignment="Left" StrokeThickness="0" Fill="#FF615D5D"/>
+        <Rectangle x:Name="ui_BottomBar" Height="100" Stroke="Black" Width="435" VerticalAlignment="Top" HorizontalAlignment="Center" StrokeThickness="4" Fill="#FF847054" RadiusX="10" RadiusY="10" Margin="0,675,0,0"/>
         <Button x:Name="btn_Exit" Style="{StaticResource btn_System}" Content="X" VerticalAlignment="Top" FontSize="36" FontWeight="Bold" Padding="0,0,0,0" Margin="-4,-4,0,0" Click="btn_Exit_Click"/>
+        <Button Style="{StaticResource btn_Navigation}" x:Name="btn_Shop" Content="Shop" Width="80" Height="80" Margin="6,0,0,5" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="24"/>
+        <Button x:Name="btn_Bank" Content="Bank" Width="80" Height="80" Margin="86,0,0,5" VerticalAlignment="Bottom" Style="{StaticResource btn_Navigation}" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btn_Job" Content="Jobs" Width="80" Height="80" Margin="166,0,0,5" VerticalAlignment="Bottom" Style="{StaticResource btn_Navigation}" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btn_Items" Content="Items" Width="80" Height="80" Margin="246,0,0,5" VerticalAlignment="Bottom" Style="{StaticResource btn_Navigation}" FontSize="24" FontWeight="Bold"/>
+        <Button x:Name="btn_Profile" Content="Profile" Width="100" Height="80" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,6,5" Style="{StaticResource btn_NavigationProfile}" FontSize="24" FontWeight="Bold"/>
     </Grid>
 </Page>
