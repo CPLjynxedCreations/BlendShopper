@@ -25,13 +25,12 @@ namespace BlendShopper
         public MainPage()
         {
             this.InitializeComponent();
-            lbl_Money.Text = PlayerControl.playerMoney;
+            lbl_Money.Text = PlayerControl.strPlayerMoney;
         }
 
         private void btn_Profile_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(ProfilePage));
-            lbl_Money.Text = PlayerControl.playerMoney;
         }
 
         private void btn_Shop_Click(object sender, RoutedEventArgs e)

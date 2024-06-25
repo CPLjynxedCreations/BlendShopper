@@ -8,15 +8,27 @@ namespace BlendShopper
 {
     public static class PlayerControl
     {
-
-        public static string playerMoney = "100";
+        public static int intPlayerMoney;
+        public static string strPlayerMoney = "100";
+        
+        
         //would be in ShopManager.cs
-        public static string amount;
+        public static int intItemAmount;
+
+        public static void ConvertToInt()
+        {
+            intPlayerMoney = Convert.ToInt32(strPlayerMoney);
+        }
+        public static void ConvertToString()
+        {
+            strPlayerMoney = Convert.ToString(intPlayerMoney);
+        }
 
         public static void Buy()
         {
             //playermoney - amount
-            amount = "50";
+            intItemAmount = 50;
+            intPlayerMoney -= intItemAmount;
         }
     }
 }

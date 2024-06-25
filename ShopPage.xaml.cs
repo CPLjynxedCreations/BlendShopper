@@ -25,7 +25,7 @@ namespace BlendShopper
         public ShopPage()
         {
             this.InitializeComponent();
-            lbl_Money.Text = PlayerControl.playerMoney;
+            lbl_Money.Text = PlayerControl.strPlayerMoney;
         }
 
         private void btn_Profile_Click(object sender, RoutedEventArgs e)
@@ -41,8 +41,10 @@ namespace BlendShopper
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             //buying something
+            PlayerControl.ConvertToInt();
             PlayerControl.Buy();
-            lbl_Money.Text = PlayerControl.amount;
+            PlayerControl.ConvertToString();
+            lbl_Money.Text = PlayerControl.strPlayerMoney;
         }
     }
 }
