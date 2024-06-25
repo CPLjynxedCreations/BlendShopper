@@ -27,14 +27,14 @@ namespace BlendShopper
             this.InitializeComponent();
         }
 
+        private void btn_Shop_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(StorePage));
+        }
+
         private void btn_Exit_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
-        }
-
-        private void btn_Shop_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }
