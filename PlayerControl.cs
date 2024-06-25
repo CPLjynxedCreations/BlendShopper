@@ -15,6 +15,7 @@ namespace BlendShopper
         //would be in ShopManager.cs
         public static int intItemAmount;
 
+        //stays in playercontrol
         public static void ConvertToInt()
         {
             intPlayerMoney = Convert.ToInt32(strPlayerMoney);
@@ -24,6 +25,7 @@ namespace BlendShopper
             strPlayerMoney = Convert.ToString(intPlayerMoney);
         }
 
+        //would be in ShopManager.cs
         public static void Buy()
         {
             //playermoney - amount
