@@ -31,10 +31,5 @@ namespace BlendShopper
         {
             Environment.Exit(0);
         }
-
-        private void btn_Shop_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(Page2));
-        }
     }
 }
